@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY=
+API_KEY=XNMBLxCA7ATZl2Eg
 
 init() {
   require_api_key

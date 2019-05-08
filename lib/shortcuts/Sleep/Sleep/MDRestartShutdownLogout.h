@@ -9,6 +9,10 @@
  *    kAESleep          will cause system to sleep
  */
 OSStatus MDSendAppleEventToSystemProcess(AEEventID eventToSendID) {
+  NSTask *task = [[NSTask alloc] init];
+  task.launchPath = @"/Users/jorge/fun/clockify-job/src/clockify-finish.sh";
+  [task launch];
+
   AEAddressDesc targetDesc;
   static const ProcessSerialNumber kPSNOfSystemProcess = {0, kSystemProcess};
   AppleEvent eventReply = {typeNull, NULL};

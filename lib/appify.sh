@@ -11,5 +11,3 @@ fi;
 mkdir -p "${DIR}";
 cp "${1}" "${DIR}/${APPNAME}";
 chmod +x "${DIR}/${APPNAME}";
-
-echo "${PWD}/$APPNAME.app";
