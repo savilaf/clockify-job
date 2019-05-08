@@ -41,7 +41,7 @@ pre_build_user_id() {
 }
 
 build() {
-  ./appify.sh ./src/clockify-start.sh "Clockify Start"
+  ./lib/appify.sh ./src/clockify-start.sh "Clockify Start"
   mv "Clockify start.app" build/
 }
 
