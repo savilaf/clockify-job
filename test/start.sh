@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY=XNKZBhCA7E18SKic
+API_KEY=
 TIME=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 DAY_MONTH=$(date -u +'%d-%m')
 

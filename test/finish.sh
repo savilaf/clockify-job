@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY=XNMBLxCA7ATZl2Eg
+API_KEY=
 USER=5cd28dbcd278ae0c521832b4
 
 TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
