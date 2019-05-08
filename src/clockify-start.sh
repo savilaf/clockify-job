@@ -47,7 +47,7 @@ start_task() {
 require_user_id() {
 	if [ -z $USER ]; then
     user_response=$(curl -sX GET https://api.clockify.me/api/v1/user \
-    -H "X-Api-Key: XNMBLxCA7ATZl2Eg" \
+    -H "X-Api-Key: ${API_KEY}" \
     -H 'content-type: application/json')
 
     id=$(echo $user_response | jq -r .id)
