@@ -7,7 +7,6 @@ TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 DAY_MONTH=$(date -u +'%d-%m')
 
 init() {
-  require_user_id
   finish_task
 }
 
@@ -45,18 +44,6 @@ finish_task() {
       osascript -e 'display notification "Al finalizar jornada" with title "ERROR HTTP '$status_code'"'
     fi
 
-  fi
-}
-
-require_user_id() {
-	if [ -z $USER ]; then
-    user_response=$(curl -sX GET https://api.clockify.me/api/v1/user \
-    -H "X-Api-Key: ${API_KEY}" \
-    -H 'content-type: application/json')
-
-    id=$(echo $user_response | jq -r .id)
-    USER=$id
-    sed -i '' -e '1,/USER=/s/USER=/USER='${id}'/' ./clockify-finish.sh  # TODO Replace name with final script name
   fi
 }
 
