@@ -1,13 +1,12 @@
 #!/bin/bash
 
 API_KEY=
+USER=
 
 TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 DAY_MONTH=$(date -u +'%d-%m')
-USER=
 
 init() {
-  require_user_id
   start_task
 }
 
@@ -41,18 +40,6 @@ start_task() {
   else
     echo 'Task is already started, not doing anything.'
     osascript -e 'display notification "Ya hay una tarea iniciada" with title "No se pudo iniciar el tiempo"'
-  fi
-}
-
-require_user_id() {
-	if [ -z $USER ]; then
-    user_response=$(curl -sX GET https://api.clockify.me/api/v1/user \
-    -H "X-Api-Key: ${API_KEY}" \
-    -H 'content-type: application/json')
-
-    id=$(echo $user_response | jq -r .id)
-    USER=$id
-    sed -i '' -e '1,/USER=/s/USER=/USER='${id}'/' ./clockify-start.sh  # TODO Replace name with final script name
   fi
 }
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 API_KEY=
+USER=
 
 TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 DAY_MONTH=$(date -u +'%d-%m')
-USER=
 
 init() {
   require_user_id
