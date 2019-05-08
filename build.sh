@@ -10,6 +10,8 @@ init() {
   pre_build_user_id
 
   build
+  deploy
+  clean
 }
 
 require_api_key() {
@@ -41,8 +43,18 @@ pre_build_user_id() {
 }
 
 build() {
-  ./lib/appify.sh ./src/clockify-start.sh "Clockify Start"
-  mv "Clockify start.app" build/
+  ./lib/appify.sh ./src/clockify-start.sh "Start clockify"
+  ./lib/appify.sh ./src/clockify-finish.sh "Finish clockify"
+}
+
+deploy() {
+  mv "Start clockify.app" build/
+  mv "Finish clockify.app" build/
+  cp -fr "build/Finish clockify.app" /Applications/
+}
+
+clean() {
+  git checkout src
 }
 
 init "$@"

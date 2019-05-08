@@ -1,7 +1,7 @@
 #!/bin/bash
 
-API_KEY=XNMBLxCA7ATZl2Eg
-USER=5cd28dbcd278ae0c521832b4
+API_KEY=
+USER=
 
 TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 DAY_MONTH=$(date -u +'%d-%m')
