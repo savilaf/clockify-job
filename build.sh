@@ -50,9 +50,10 @@ build() {
 deploy() {
   mv "Start clockify.app" build/
   mv "Finish clockify.app" build/
-  cp src/clockify-start.sh build/
-  cp src/clockify-finish.sh build/
-  cp -fr "build/Finish clockify.app" /Applications/
+  
+  cp src/clockify-start.sh build/clock-start.sh
+  cp src/clockify-finish.sh build/clock-finish.sh
+  cp build/*.sh /usr/local/bin
 }
 
 clean() {
