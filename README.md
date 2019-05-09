@@ -1,9 +1,12 @@
 # clockify-job
-## Initial configuration
-1. Replace API_KEY value with your API_KEY at buil.sh, you can generate one at https://clockify.me/user/settings
+## Build
+1. Replace API_KEY value with your API_KEY at build.sh, you can generate one at https://clockify.me/user/settings
 2. Run `./build.sh`
-3. Set your `Clockify Start` App run at log in at 
+
+## Build
+1. Set your `Clockify Start` App run at log in at 
 System preferences -> User & Groups -> Login Items
+2. Set your `Clockify finish.sh` as an alias until app is done
 
 ## TODO
-- Finish Finish script
+- Finish Finish script for app
