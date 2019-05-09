@@ -7,9 +7,8 @@
 1. Run `clockify-start` from your terminal
 2. Run `clockify-finish` from your terminal
 
-Additionally you can set your `Clockify Start` App run at log in at 
+Additionally, if you use `shutdown` and not `sleep` when leaving: you can set your `Clockify Start` App run at log in at 
 System preferences -> User & Groups -> Login Items
-
 
 ## TODO
 - Finish Finish script for app
