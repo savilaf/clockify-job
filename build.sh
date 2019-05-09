@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY=XNMBLxCA7ATZl2Eg
+API_KEY=
 
 init() {
   require_api_key
@@ -50,11 +50,14 @@ build() {
 deploy() {
   mv "Start clockify.app" build/
   mv "Finish clockify.app" build/
+  cp src/clockify-start.sh build/
+  cp src/clockify-finish.sh build/
   cp -fr "build/Finish clockify.app" /Applications/
 }
 
 clean() {
   git checkout src
+  echo Done!
 }
 
 init "$@"
