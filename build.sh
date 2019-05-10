@@ -55,6 +55,10 @@ deploy() {
   cp src/clockify-finish.sh build/clock-finish
   cp build/clock-start /usr/local/bin/
   cp build/clock-finish /usr/local/bin/
+
+  printf "\n\n// Clockify aliases" >> $HOME/.bash_profile
+  printf "\nalias cls=clock-start" >> $HOME/.bash_profile
+  printf "\nalias clf=clock-finish" >> $HOME/.bash_profile
 }
 
 clean() {
